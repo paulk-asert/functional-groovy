@@ -1,3 +1,7 @@
+import java.util.function.Predicate
+import java.util.stream.Collectors
+import java.util.stream.IntStream
+
 @groovy.transform.CompileStatic Number fac(Number n) { n == 1 ? 1G : n * fac(n - 1) }
 
 def nums = 100..200
@@ -32,8 +36,10 @@ def both = []
 //println palins
 //println both
 //
-println primes.intersect(palins)
+//println primes.intersect(palins)
 //
 println nums.findAll(isPrime)
 println nums.findAll(isPalindrome)
-//println nums.findAll{ n -> isPalindrome(n) && isPrime(n) }
+println nums.findAll{ n -> isPalindrome(n) && isPrime(n) }
+
+println IntStream.rangeClosed(100, 200).boxed().filter(isPrime).filter(isPalindrome).collect(Collectors.toList())

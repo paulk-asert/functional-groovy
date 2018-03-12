@@ -1,0 +1,3 @@
+def subprojects = ['basics', 'streams', 'recursion', 'purity']
+
+include(subprojects as String[])
