@@ -1,7 +1,6 @@
+//@Grab('one.util:streamex:0.6.6')
 import one.util.streamex.StreamEx
-
 import java.util.function.Function
-
 import static StreamExUtil.batches
 
 def s = [2, 5, 3, 2, 0, 2]

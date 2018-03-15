@@ -5,4 +5,4 @@ def factorial = {
 
 println factorial(10G)
 '''
-// Caught: groovy.lang.MissingMethodException: No signature of method: FactorialBasic.factorial() is applicable for argument types: (BigInteger) values: [9]
+// Caught: groovy.lang.MissingMethodException: No signature of method: Factorial0.factorial() is applicable for argument types: (BigInteger) values: [9]

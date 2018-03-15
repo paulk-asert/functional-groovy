@@ -15,18 +15,21 @@ assert alsoTriple(6) == 18
 
 def twiceMethod(int num) { num * 2 }
 assert twiceMethod(2) == 4
+
 def alsoTwice = this.&twiceMethod
 assert alsoTwice(5) == 10
 
 def callWith5(Closure c) { c(5) }
 assert 15 == callWith5(triple)
 
-def applyTwice = { arg, Closure c -> c(c(arg)) }
+def applyTwice = {
+    arg, Closure c -> c(c(arg)) }
 assert 18 == applyTwice(2, triple)
 
 // ...
 
-def quadruple = { arg = 2 -> twice(arg) * 2 }
+def quadruple = { arg = 2 ->
+    twice(arg) * 2 }
 assert quadruple(5) == 20
 assert quadruple() == 8
 
@@ -42,7 +45,8 @@ assert 45 == [alsoTwice, alsoTriple, alsoQuadruple].sum{ it(5) }
 // ...
 
 def THE_ANSWER = 42
-def checkAnswer = { int guess -> guess == THE_ANSWER }
+def checkAnswer = { int guess ->
+    guess == THE_ANSWER }
 assert !checkAnswer(21)
 assert checkAnswer(twice(21))
 
