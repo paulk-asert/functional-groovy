@@ -4,8 +4,8 @@ if (myList != null && myList.size() > 1) {
 }
 println myList
 
-def gs1 = "Hello at ${new Date()}"
-def gs2 = "Hello at ${ -> new Date()}"
+def gs1 = "Hello at ${ new Date() }"
+def gs2 = "Hello at ${ -> new Date() }"
 sleep 5000
 println gs1
 println gs2
